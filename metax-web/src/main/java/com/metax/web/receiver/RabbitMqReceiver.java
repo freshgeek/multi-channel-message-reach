@@ -16,7 +16,7 @@ import org.springframework.stereotype.Component;
  * rabbitMq监听服务
  * @Author: hanabi
  */
-@Component
+//@Component
 public class RabbitMqReceiver {
 
     @Autowired

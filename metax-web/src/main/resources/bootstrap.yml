@@ -13,10 +13,10 @@ spring:
     nacos:
       discovery:
         # 服务注册地址
-        server-addr: 192.168.1.100:8848
+        server-addr: ${spring.cloud.nacos.config.server-addr}
       config:
         # 配置中心地址
-        server-addr: 192.168.1.100:8848
+        server-addr: nacos.infra.svc.cluster.local:8848
         # 配置文件格式
         file-extension: yml
         # 共享配置
@@ -26,6 +26,7 @@ spring:
             refresh: true
         shared-configs:
           - application-${spring.profiles.active}.${spring.cloud.nacos.config.file-extension}
+          - redis-${spring.profiles.active}.${spring.cloud.nacos.config.file-extension}
         refresh-enabled: true
     # sentinel控制台配置
     sentinel:

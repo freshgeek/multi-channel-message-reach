@@ -13,7 +13,7 @@ import org.springframework.context.annotation.Configuration;
  * @Author: hanabi
  * @DateTime: 2023/11/20 8:58
  **/
-@Configuration
+//@Configuration
 public class RedissonConfig {
 
     @Value("${spring.redis.host}")
@@ -21,9 +21,6 @@ public class RedissonConfig {
 
     @Value("${spring.redis.port}")
     private String redisPort;
-
-    @Value("${spring.redis.auth}")
-    private String auth;
 
 
     @Bean
