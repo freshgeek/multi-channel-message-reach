@@ -168,3 +168,12 @@ Sentinel、SpringbootAdmin（visual模块）
 
 本项目仅供学习参考，如对你有帮助就给个star吧~
 
+
+# 待办
+
+- 提供feign 接口
+- 新增webhook渠道
+- 更换阿里云oss
+- 更换mq - rocketmq 
+- 代码内聚，删除冗余代码
+- 

@@ -333,7 +333,6 @@
     <modules>
         <module>metax-auth</module>
         <module>metax-gateway</module>
-        <module>metax-visual</module>
         <module>metax-modules</module>
         <module>metax-api</module>
         <module>metax-common</module>
