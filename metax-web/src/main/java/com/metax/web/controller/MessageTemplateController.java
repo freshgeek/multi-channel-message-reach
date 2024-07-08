@@ -166,7 +166,6 @@ public class MessageTemplateController extends BaseController implements RemoteM
         return sendMessageService.send(sendForm);
     }
 
-    @RequiresPermissions("web:message_template:send")
     @InnerAuth
     @Log(title = "消息模板-内部", businessType = BusinessType.SEND)
     @PostMapping("/send-inner")
