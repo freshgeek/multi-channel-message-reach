@@ -2,7 +2,7 @@ package com.metax.common.core.constant;
 
 /**
  * 服务名称
- * 
+ *
  * @author ruoyi
  */
 public class ServiceNameConstants
@@ -16,6 +16,10 @@ public class ServiceNameConstants
      * 系统模块的serviceid
      */
     public static final String SYSTEM_SERVICE = "metax-system";
+    /**
+     * web 模块
+     */
+    public static final String WEB_SERVICE = "metax-web";
 
     /**
      * 文件服务的serviceid

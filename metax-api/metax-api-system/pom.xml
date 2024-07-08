@@ -8,7 +8,7 @@
         <version>3.6.3</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
-    
+
     <artifactId>metax-api-system</artifactId>
 
     <description>
@@ -16,7 +16,7 @@
     </description>
 
     <dependencies>
-		
+
         <!-- RuoYi Common Core-->
         <dependency>
             <groupId>com.metax</groupId>
@@ -27,6 +27,11 @@
             <artifactId>mybatis-plus-annotation</artifactId>
             <version>3.4.3</version>
             <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <scope>provided</scope>
         </dependency>
 
     </dependencies>

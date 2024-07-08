@@ -12,6 +12,9 @@ import com.metax.common.core.context.SecurityContextHolder;
 import com.metax.common.log.enums.BusinessType;
 
 import com.metax.common.log.annotation.Log;
+import com.metax.common.security.annotation.InnerAuth;
+import com.metax.system.api.RemoteMessageService;
+import com.metax.system.api.dto.SendFormDto;
 import com.metax.web.domain.MessageTemplate;
 import com.metax.web.dto.MessageTemplateDto;
 import com.metax.web.service.SendMessageService;
@@ -45,7 +48,7 @@ import static com.metax.common.core.constant.MetaxDataConstants.REAL_TIME;
  */
 @RestController
 @RequestMapping("/message_template")
-public class MessageTemplateController extends BaseController {
+public class MessageTemplateController extends BaseController implements RemoteMessageService {
     @Autowired
     private IMessageTemplateService messageTemplateService;
     @Autowired
@@ -163,6 +166,13 @@ public class MessageTemplateController extends BaseController {
         return sendMessageService.send(sendForm);
     }
 
+    @RequiresPermissions("web:message_template:send")
+    @InnerAuth
+    @Log(title = "消息模板-内部", businessType = BusinessType.SEND)
+    @PostMapping("/send-inner")
+    public AjaxResult send(@RequestBody SendFormDto sendForm) {
+        return sendMessageService.send(BeanUtil.copyProperties(sendForm, SendForm.class));
+    }
 
     /**
      * 启动消息
